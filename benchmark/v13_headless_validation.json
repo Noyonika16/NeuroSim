@@ -1,0 +1,384 @@
+{
+  "version": "v13.3",
+  "testType": "headless Node VM executing web/app.js; no browser rendering",
+  "seedSet": [
+    20261027,
+    1,
+    42,
+    100,
+    20261028,
+    123456
+  ],
+  "readoutTraining": {
+    "chemotaxisRows": 13898,
+    "trainingSeedCount": 15,
+    "heldoutSeedCount": 5,
+    "featureCount": 105,
+    "heldoutActionImitationMetrics": {
+      "mae_radians_runtime_clipped": 0.023308247327804565,
+      "rmse_radians_runtime_clipped": 0.034630461336236144,
+      "r2_runtime_clipped": 0.6458884477615356,
+      "heldout_rows": 3500,
+      "target_std_radians": 0.058195341378450394
+    },
+    "warning": "Metrics use the deployed +/-0.045 rad/frame runtime clip. Teacher turn imitation metrics are not foraging success metrics and do not validate biological fidelity."
+  },
+  "flappyNeural800FrameTrials": [
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 1,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 42,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 100,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 20261028,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 123456,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    }
+  ],
+  "assistedAblationParityControls": [
+    {
+      "game": "flappy",
+      "controller": "assisted",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "assisted",
+      "seed": 20261027,
+      "ablated": [
+        "AVAL",
+        "AVAR",
+        "AVDL",
+        "AVDR"
+      ],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "assisted",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 11,
+      "frames": 700,
+      "reorientations": 0,
+      "turnEpisodes": 11,
+      "pirouettes": 0,
+      "bodyLength": 27,
+      "reason": "harness frame cap",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "assisted",
+      "seed": 20261027,
+      "ablated": [
+        "AVAL",
+        "AVAR",
+        "AVDL",
+        "AVDR"
+      ],
+      "score": 11,
+      "frames": 700,
+      "reorientations": 0,
+      "turnEpisodes": 11,
+      "pirouettes": 0,
+      "bodyLength": 27,
+      "reason": "harness frame cap",
+      "featureCoverage": 1
+    }
+  ],
+  "ablationAndStrictControls": [
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 20261027,
+      "ablated": [
+        "AVAL",
+        "AVAR",
+        "AVDL",
+        "AVDR"
+      ],
+      "score": 6,
+      "frames": 800,
+      "flaps": 22,
+      "reason": "harness frame cap",
+      "featureCoverage": 0.9595959595959596,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "trained-hybrid",
+      "seed": 20261027,
+      "ablated": [
+        "CEPDL",
+        "CEPDR",
+        "CEPVL",
+        "CEPVR"
+      ],
+      "score": 0,
+      "frames": 32,
+      "flaps": 0,
+      "reason": "Floor collision",
+      "featureCoverage": 0.9595959595959596,
+      "strictMotorDriveStats": null
+    },
+    {
+      "game": "flappy",
+      "controller": "neuron-only",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 1,
+      "frames": 216,
+      "flaps": 6,
+      "reason": "Pipe collision",
+      "featureCoverage": 1,
+      "strictMotorDriveStats": {
+        "min": 0.01088062633167583,
+        "max": 0.20080240423029067,
+        "mean": 0.1736058633564865,
+        "samples": 216,
+        "threshold": 0.18,
+        "thresholdCrossings": 88,
+        "thresholdCrossingsDuringCooldown": 82,
+        "thresholdCrossingsActionEligible": 6,
+        "flapActions": 6
+      }
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "neuron-only",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 0,
+      "frames": 162,
+      "reorientations": 0,
+      "turnEpisodes": 0,
+      "pirouettes": 0,
+      "bodyLength": 16,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    }
+  ],
+  "chemotaxisNeuralFullEpisodes": [
+    {
+      "game": "chemotaxis",
+      "controller": "trained-hybrid",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 1,
+      "frames": 178,
+      "reorientations": 0,
+      "turnEpisodes": 2,
+      "pirouettes": 0,
+      "bodyLength": 17,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "trained-hybrid",
+      "seed": 1,
+      "ablated": [],
+      "score": 7,
+      "frames": 575,
+      "reorientations": 0,
+      "turnEpisodes": 7,
+      "pirouettes": 0,
+      "bodyLength": 23,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "trained-hybrid",
+      "seed": 42,
+      "ablated": [],
+      "score": 16,
+      "frames": 1800,
+      "reorientations": 3,
+      "turnEpisodes": 14,
+      "pirouettes": 3,
+      "bodyLength": 32,
+      "reason": "Time limit (1,800 frames)",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "trained-hybrid",
+      "seed": 100,
+      "ablated": [],
+      "score": 11,
+      "frames": 1247,
+      "reorientations": 1,
+      "turnEpisodes": 12,
+      "pirouettes": 1,
+      "bodyLength": 27,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "trained-hybrid",
+      "seed": 20261028,
+      "ablated": [],
+      "score": 9,
+      "frames": 1070,
+      "reorientations": 2,
+      "turnEpisodes": 8,
+      "pirouettes": 2,
+      "bodyLength": 25,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "trained-hybrid",
+      "seed": 123456,
+      "ablated": [],
+      "score": 3,
+      "frames": 311,
+      "reorientations": 1,
+      "turnEpisodes": 4,
+      "pirouettes": 1,
+      "bodyLength": 19,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    }
+  ],
+  "chemotaxisNeuronOnlyTrials700FrameCap": [
+    {
+      "game": "chemotaxis",
+      "controller": "neuron-only",
+      "seed": 20261027,
+      "ablated": [],
+      "score": 0,
+      "frames": 162,
+      "reorientations": 0,
+      "turnEpisodes": 0,
+      "pirouettes": 0,
+      "bodyLength": 16,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "neuron-only",
+      "seed": 42,
+      "ablated": [],
+      "score": 0,
+      "frames": 133,
+      "reorientations": 0,
+      "turnEpisodes": 0,
+      "pirouettes": 0,
+      "bodyLength": 16,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    },
+    {
+      "game": "chemotaxis",
+      "controller": "neuron-only",
+      "seed": 123456,
+      "ablated": [],
+      "score": 0,
+      "frames": 115,
+      "reorientations": 0,
+      "turnEpisodes": 0,
+      "pirouettes": 0,
+      "bodyLength": 16,
+      "reason": "Boundary collision",
+      "featureCoverage": 1
+    }
+  ],
+  "summaries": {
+    "flappyMeanScoreAt800FrameHarnessCap": 6,
+    "assistedFlappyAblationParity": true,
+    "assistedChemotaxisAblationParity": true,
+    "chemotaxisMeanFood": 7.833333333333333,
+    "chemotaxisTimeLimitRuns": 1,
+    "chemotaxisBoundaryCollisionRuns": 5,
+    "chemotaxisSelfCollisionRuns": 0,
+    "neuronOnlyChemotaxisBoundaryCollisionRuns": 3,
+    "neuronOnlyChemotaxisSelfCollisionRuns": 0,
+    "neuronOnlyChemotaxisMeanFood": 0
+  },
+  "limitations": [
+    "Flappy trials are capped by the harness at 800 frames, not run to natural game-over.",
+    "Readout training imitates the assisted policy; it does not train connectome synaptic weights.",
+    "Neuron-only Flappy motor-drive distribution is recorded at every simulation frame; its threshold remains unchanged pending controlled evaluation. Neuron-only Flappy remains an untrained baseline and may collide with pipes.",
+    "Neuron-only Chemotaxis has no boundary-turn override; wall proximity is only encoded as synthetic sensory input. Headless smoke results do not replace live-browser validation or establish biological fidelity."
+  ]
+}
